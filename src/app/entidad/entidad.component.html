@@ -1,0 +1,84 @@
+<div class="container">
+      
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="title">tipo de documento</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            required
+            [(ngModel)]="entidad.id_tipo_documento"
+            name="nombre"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">tipo de contribuyente</label>
+          <input
+            class="form-control"
+            id="descripcion"
+            required
+            [(ngModel)]="entidad.id_tipo_contribuyente"
+            name="descripcion"
+          />
+        </div>
+        <div class="form-group">
+            <label for="description">numero de documento</label>
+            <input
+              class="form-control"
+              id="descripcion"
+              required
+              [(ngModel)]="entidad.nro_documento"
+              name="descripcion"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">razon social</label>
+            <input
+              class="form-control"
+              id="descripcion"
+              required
+              [(ngModel)]="entidad.razon_social"
+              name="descripcion"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">nombre comercial</label>
+            <input
+              class="form-control"
+              id="descripcion"
+              required
+              [(ngModel)]="entidad.nombre_comercial"
+              name="descripcion"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">direccion</label>
+            <input
+              class="form-control"
+              id="descripcion"
+              required
+              [(ngModel)]="entidad.direccion"
+              name="descripcion"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">telefono</label>
+            <input
+              class="form-control"
+              id="descripcion"
+              required
+              [(ngModel)]="entidad.telefono"
+              name="descripcion"
+            />
+          </div>
+        <button (click)="saveEntidad()" class="btn btn-success">Enviar</button>
+      </div>
+      <div *ngIf="submitted">
+        <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newEntidad()">Agregar</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,21 @@
+<div class="container">
+<div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="description">Nombre</label>
+        <input
+          class="form-control"
+          id="nombre"
+          required
+          [(ngModel)]="contribuyente.nombre"
+          name="nombre"
+        />
+      </div>
+      <button (click)="saveContribuyente()" class="btn btn-success">Submit</button>
+    </div>
+    <div *ngIf="submitted">
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newContribuyente()">Add</button>
+    </div>
+  </div>
+</div>
